@@ -1,27 +1,17 @@
 # GiphyClone
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
+Based on your requirement, I create Gipy-Clone. This app will show Trending GIFs, GIF's detail. Because I can not find api search trending GIF when researching on [Giphy Developers Document](https://developers.giphy.com/), search function will search all GIF in Giphy, not only Trending GIF, if you pass null value to searching input, I will return Trending Page.
+I spend 9 hours to complete this project. I'm a covid-19 patient when I coded this project, so I think I can do it better if I'm fine.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## UI Library
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[ng-zorro](https://ng.ant.design/) version ~11.4.2
 
-## Build
+## State Management
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[angular-akita](https://datorama.github.io/akita/docs/installation)(state management) version ~6.2.3
