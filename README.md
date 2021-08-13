@@ -1,6 +1,7 @@
 # GiphyClone
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
+
 Based on your requirement, I create Gipy-Clone. This app will show Trending GIFs, GIF's detail. Because I can not find api search trending GIF when researching on [Giphy Developers Document](https://developers.giphy.com/), search function will search all GIF in Giphy, not only Trending GIF, if you pass null value to searching input, I will return Trending Page.
 I spend 9 hours to complete this project. I'm a covid-19 patient when I coded this project, so I think I can do it better if I'm fine.
 
