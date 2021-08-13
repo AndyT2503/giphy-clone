@@ -1,0 +1,9 @@
+<cdk-virtual-scroll-viewport itemSize="100" class="list-container">
+  <dd nz-row>
+    <div class="item-detail" nz-col nzSpan="8" *cdkVirtualFor="let item of listGif" (click)="openDetail(item.slug)">
+      <div class="gif">
+        <img [(src)]="item.images.original.webp">
+      </div>
+    </div>
+  </dd>
+</cdk-virtual-scroll-viewport>

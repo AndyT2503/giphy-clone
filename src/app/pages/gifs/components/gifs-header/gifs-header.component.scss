@@ -1,0 +1,36 @@
+.header-container {
+  display: flex;
+  justify-content: center;
+
+  .header {
+
+    padding-top: 8px;
+    .logo {
+      width: 200px;
+      margin-right: 8px;
+    }
+  
+    input {
+      height: 50px;
+      width: 600px !important;
+    }
+  
+    button {
+      height: 50px;
+      width: 50px;
+      background: linear-gradient(45deg, rgb(153, 51, 255) 0%, rgb(255, 102, 102) 100%) !important;
+  
+      .icon-button {
+        color: #ffff;
+        font-size: 23px;
+      }
+    }
+  
+    .title {
+      margin-top: 8px;
+      h2 {
+        color: #ffff;
+      }
+    }
+  }
+}

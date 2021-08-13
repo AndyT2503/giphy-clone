@@ -1,0 +1,11 @@
+<div class="header-container">
+  <div class="header">
+    <img class="logo cursor-pointer" src="assets/logo/giphy-logo.png" alt="logo" (click)="backToHome()">
+    <input type="text" nzSize="large" [(ngModel)]="filterGif" nz-input placeholder="Search all the Gifs and Stickers"
+      (keyup.enter)="searchGif()" />
+    <button nz-button nzSearch (click)="searchGif()"><i class="icon-button" nz-icon nzType="search"></i></button>
+    <div class="title">
+      <h2>Trending GIFs</h2>
+    </div>
+  </div>
+</div>

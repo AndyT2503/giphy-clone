@@ -1,0 +1,19 @@
+.list-container {
+  height: calc(100vh - 117px);
+  dd {
+    padding-left: 150px;
+    padding-right: 150px;
+
+    .item-detail {
+      padding: 8px;
+      cursor: pointer;
+
+      .gif {
+        img {
+          width: 100%;
+          height: 300px;
+        }
+      }
+    }
+  }
+}

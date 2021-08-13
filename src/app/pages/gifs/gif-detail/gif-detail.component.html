@@ -1,0 +1,72 @@
+<div class="detail-container">
+  <div nz-row>
+    <div nz-col nzSpan="8">
+      <div class="p-8">
+        <div class="user-info">
+          <nz-avatar [nzShape]="'square'" [nzSize]="64" [nzIcon]="'user'" [nzSrc]="gifData?.user?.avatar_url">
+          </nz-avatar>
+          <div class="username ml-8" *ngIf="gifData?.user">
+            <h4 class="white-1">{{gifData?.user?.display_name}}</h4>
+            <p class="white-2">@{{gifData?.user?.username}}<span *ngIf="gifData?.user?.is_verified" class="ml-4"><i
+                  nz-icon nzType="check-circle" nzTheme="twotone"></i></span></p>
+          </div>
+        </div>
+        <div class="user-description mt-4">
+          <p class="white-2">{{gifData?.user?.description}}</p>
+        </div>
+        <div class="user-social-network mt-8">
+          <h4 class="white-1">Follow on:</h4>
+          <div>
+            <nz-tag class="cursor-pointer" nzColor="#3b5999">
+              <i nz-icon nzType="facebook"></i>
+              <span>Facebook</span>
+            </nz-tag>
+            <nz-tag (click)="goToUrl(gifData?.user?.instagram_url!)" class="cursor-pointer ml-4" nzColor="#DD2A7B">
+              <i nz-icon nzType="instagram"></i>
+              <span>Instagram</span>
+            </nz-tag>
+            <nz-tag class="cursor-pointer ml-4" nzColor="#55acee">
+              <i nz-icon nzType="twitter"></i>
+              <span>Twitter</span>
+            </nz-tag>
+          </div>
+          <div *ngIf="gifData?.user">
+            <h4 class="white-2">Source:</h4>
+            <h4 class="white-2 cursor-pointer" (click)="goToUrl(gifData?.user?.website_url!)">
+              {{gifData?.user?.website_url}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div nz-col nzSpan="16">
+      <div class="p-8">
+        <h3 class="white-1">{{gifData?.title}}</h3>
+        <img [src]="gifData?.images?.original?.url">
+        <div class="function ml-8">
+          <div class="cursor-pointer" click="favorite()">
+            <i nz-icon nzType="heart" nzTheme="twotone"></i>
+            <span class="white-2 ml-8">Favorite</span>
+          </div>
+          <div class="cursor-pointer" click="getCopyLink()">
+            <i nz-icon nzType="api" nzTheme="twotone"></i>
+            <span class="white-2 ml-8">Copy link</span>
+          </div>
+          <div>
+            <i nz-icon nzType="eye" nzTheme="twotone"></i>
+            <span class="white-2 ml-8">{{viewCount! | number: '1.0-2'}} Views</span>
+          </div>
+        </div>
+        <div class="related-gifs">
+          <h3 class="white-2">Related GIFs</h3>
+          <nz-pagination class="pagination mb-4" [nzPageIndex]="gifsRelatedPagination.pageIndex" [nzTotal]="gifsRelatedPagination.pageSize"
+            (nzPageIndexChange)="onPageIndexRelateGifsChange($event)" nzSimple></nz-pagination>
+          <div nz-row class="related-gifs-list">
+            <div nz-col class="p-8" nzSpan="8" *ngFor="let item of relateGifs">
+              <img class="related-gif-image" [src]="item.images.fixed_height.webp">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
